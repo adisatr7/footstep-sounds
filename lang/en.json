@@ -1,0 +1,48 @@
+{
+  "footstep-sounds": {
+    "behavior": {
+      "surface": "Footstep Surface",
+      "hint": "Play this surface's footstep once per grid-size distance of committed token movement. The smallest configured Region wins overlaps. Requires an active GM viewing the scene."
+    },
+    "fields": {
+      "mode": {
+        "label": "Playback strategy",
+        "hint": "Use the world default or choose a strategy for this surface. Changes apply to the next footstep.",
+        "default": "Use world default"
+      },
+      "soundPath": {
+        "label": "Footstep sound",
+        "hint": "An audio file containing a single footstep, ideally no longer than 2 seconds."
+      },
+      "radius": {
+        "label": "Hearing radius",
+        "hint": "Maximum hearing distance, measured in the scene's distance units."
+      },
+      "volume": {
+        "label": "Volume",
+        "hint": "Sound volume from 0 to 1. Foundry's Ambient volume control also applies."
+      },
+      "easing": {
+        "label": "Volume easing",
+        "hint": "Checked: volume decreases with distance. Unchecked: constant volume within hearing range. Native walls and muffling still apply."
+      },
+      "walls": {
+        "label": "Walls block footsteps",
+        "hint": "When unchecked, use Foundry's native lowpass muffling through walls."
+      }
+    },
+    "settings": {
+      "mode": {
+        "name": "Default playback strategy",
+        "hint": "Used by surfaces set to Use world default. Create per step allows overlapping clips; Reuse per token stops the previous clip when the next step plays. Changes apply to the next footstep and do not affect surface overrides.",
+        "createDelete": "Create per step",
+        "reuse": "Reuse per token"
+      }
+    },
+    "emitterName": "Footstep",
+    "errors": {
+      "clipDuration": "Use a short footstep clip (1 second or less): {soundPath}",
+      "removeFootstep": "Failed to remove footstep"
+    }
+  }
+}
