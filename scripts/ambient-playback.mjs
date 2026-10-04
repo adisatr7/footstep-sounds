@@ -144,10 +144,10 @@ export function activatePulse(document) {
     );
 
     const timer = setTimeout(() => {
-      expirations.delete(document.uuid);
       if (document.getFlag(MODULE_ID, "pulse") !== pulse) {
         return;
       }
+      expirations.delete(document.uuid);
       document.updateSource({ hidden: true });
       document.object?.initializeSoundSource();
       document.object?.sync(false, 0, { fade: 0 }).catch(reportError);
