@@ -1,0 +1,30 @@
+{
+  "id": "footstep-sounds",
+  "title": "Footstep Sounds",
+  "description": "Region-selected footsteps played through native canvas Ambient Sounds.",
+  "version": "1.0.0",
+  "authors": [
+    {
+      "name": "reflection77"
+    }
+  ],
+  "compatibility": {
+    "minimum": "14",
+    "verified": "14.367"
+  },
+  "documentTypes": {
+    "RegionBehavior": {
+      "surface": {}
+    }
+  },
+  "esmodules": [
+    "scripts/main.mjs"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ]
+}
